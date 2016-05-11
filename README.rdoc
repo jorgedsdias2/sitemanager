@@ -1,5 +1,17 @@
 = Gerenciador de sites
 
+Gerenciador de projetos desenvolvido com Ruby on Rails
+
+== Baixar e atualizar o projeto
+
+Para baixar o projeto no github
+
+  git clone git@github.com:jorgedsdias/manager.git
+  
+Para atualizar a versão do projeto
+
+  git pull origin master
+
 == Versão Ruby
 
 Ruby 2.0.0
