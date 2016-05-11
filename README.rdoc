@@ -1,15 +1,18 @@
-== README
+== Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gerenciador de sites
 
-Things you may want to cover:
+== Versão Ruby
 
-* Ruby version
-Ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
+Ruby 2.0.0
 
-* Rails version
-	Rails 4.2.6
+== Versão Rails
+
+Rails 4.2.6
+
+== Banco de dados: Instalação
+
+	sudo apt-get install postgresql pgadmin3
 
 * System dependencies
 
