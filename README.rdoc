@@ -10,15 +10,15 @@ Rails 4.2.6
 
 == Banco de dados: Instalação e Configuração
 
-=== Instalação banco de dados no Linux
+Instalação banco de dados no Linux
 
   sudo apt-get install postgresql pgadmin3
   
-=== Instalação de dependências
+Instalação de dependências
 
   sudo apt-get install libpq-dev
   
-=== Instalar gem para conexão com postgresql  
+Instalar gem para conexão com postgresql  
   
   sudo gem install pg -v '0.18.1'
   
