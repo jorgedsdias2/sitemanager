@@ -1,6 +1,6 @@
 = Gerenciador de sites
 
-Gerenciador de projetos desenvolvido com Ruby on Rails
+Gerenciador de projetos desenvolvido em Ruby on Rails
 
 == Baixar e atualizar o projeto
 
