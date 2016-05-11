@@ -1,4 +1,4 @@
-= \RDoc - Gerenciador de sites
+= Gerenciador de sites
 
 == Versão Ruby
 
