@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: Page1
+  summary: Page1
+  description: Page1
+  nickname: page1
+  link: page1
+  target: _blank
+  order: 1
+
+two:
+  id: 2
+  title: Page2
+  summary: Page2
+  description: Page2
+  nickname: page2
+  link: page2
+  target: _blank
+  order: 2

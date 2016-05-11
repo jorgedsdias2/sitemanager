@@ -1,0 +1,13 @@
+one:
+  id: 1
+  name: User1,
+  email: user1@email.com
+  password_digest: 123456
+  group_id: 1
+
+two:
+  id: 2
+  name: User2
+  email: user2@email.com
+  password_digest: 123456
+  group_id: 2
