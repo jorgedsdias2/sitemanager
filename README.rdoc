@@ -18,10 +18,10 @@ Instalação de dependências
 
   sudo apt-get install libpq-dev
   
-Instalar gem para conexão com postgresql  
+Instalar gem para conexão com Postgresql  
   
   sudo gem install pg -v '0.18.1'
   
-== Suíte de testes do sistema
+== Suíte de Testes do Sistema
 
   rspec spec/*
