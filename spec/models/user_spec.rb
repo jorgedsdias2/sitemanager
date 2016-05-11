@@ -2,16 +2,10 @@ require 'rails_helper'
 
 describe User do
 	before(:each) do
-		@user = User.new(
-			name: 'User',
-			email: 'user@email.com',
-			password: '123456',
-			password_confirmation: '123456',
-			group_id: 1
-		);
-		@user_bd = User.find(1)
-		@group_admin = Group.find_by_name('Administrator')
-		@group_editor = Group.find_by_name('Editor')
+		@user = build(:user)
+		@user_bd = create(:user, email: 'user1@email.com')
+		@group_admin = create(:group, name: 'Administrator')
+		@group_editor = create(:group, name: 'Editor')
 	end
 
 	it "should be a valid user" do
