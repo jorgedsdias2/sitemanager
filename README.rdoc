@@ -10,7 +10,7 @@ Rails 4.2.6
 
 == Banco de dados: Instalação
 
-sudo apt-get install postgresql pgadmin3
+  sudo apt-get install postgresql pgadmin3
 
 * System dependencies
 
