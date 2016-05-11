@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160505002859) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "pages", ["order"], name: "index_pages_on_order", unique: true, using: :btree
   add_index "pages", ["title"], name: "index_pages_on_title", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
