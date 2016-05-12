@@ -1,45 +1,39 @@
-== README
+= Gerenciador de sites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gerenciador de projetos desenvolvido em Ruby on Rails
 
-Things you may want to cover:
+== Baixar e atualizar o projeto
 
-* Ruby version
-Ruby 2.0.0p648 (2015-12-16 revision 53162) [x86_64-linux]
+Para baixar o projeto no github
 
-* Rails version
+  git clone git@github.com:jorgedsdias/manager.git
+  
+Para atualizar a versão do projeto
+
+  git pull origin master
+
+== Versão Ruby
+
+Ruby 2.0.0
+
+== Versão Rails
+
 Rails 4.2.6
 
-* System dependencies
+== Banco de dados: Instalação e Configuração
 
-* Configuration
+Instalação banco de dados no Linux
 
-* Database creation
+  sudo apt-get install postgresql pgadmin3
+  
+Instalação de dependências
 
-* Database initialization
-Para conectar ao banco de dados
+  sudo apt-get install libpq-dev
+  
+Instalar gem para conexão com Postgresql  
+  
+  sudo gem install pg -v '0.18.1'
+  
+== Suíte de Testes do Sistema
 
-# instalar o postgresql
-
-sudo apt-get install postgresql pgadmin3
-
-# primeiro instalar essa lib para não ter problemas com a gem pg
-
-sudo apt-get install libpq-dev
-
-# instalar a gem para conexao com o postgres
-
-sudo gem install pg -v '0.18.1'
-
-* How to run the test suite
-rspec spec/*
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  rspec spec/*
