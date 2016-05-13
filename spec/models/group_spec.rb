@@ -24,4 +24,8 @@ RSpec.describe Group, type: :model do
 		@group.save
 		expect(@group.errors[:name].any?).to eq(true)
 	end
+
+	it "have many users" do
+		expect(@group).to respond_to(:users)
+	end
 end

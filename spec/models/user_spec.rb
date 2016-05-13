@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*- 
+# -*- encoding : utf-8 -*-
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -51,7 +51,7 @@ RSpec.describe User, type: :model do
 		expect(@user.errors[:password_confirmation].any?).to eq(true)
 	end
 
-	it "not save user without group" do
+	it "belongs to group" do
 		@user.group_id = nil
 		@user.save
 		expect(@user.errors[:group_id].any?).to eq(true)
@@ -67,5 +67,9 @@ RSpec.describe User, type: :model do
 		@user.group_id = group_admin.id
 		@user.save
 		expect(@user.administrator?).to eq(true)
+	end
+
+	it "have many pages" do
+		expect(@user).to respond_to(:pages)
 	end
 end

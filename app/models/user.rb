@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
 	belongs_to :group
+	has_many :pages
   	has_secure_password
 	validates :name, presence: true
 	validates :email, presence: true, uniqueness: true

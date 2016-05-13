@@ -9,9 +9,14 @@ class CreatePages < ActiveRecord::Migration
       t.string :link
       t.string :target
       t.integer :order
+      t.belongs_to :user, index: true
 
       t.timestamps null: false
       t.index :title, unique: true
     end
+  end
+
+  def down
+    drop_table :pages
   end
 end
