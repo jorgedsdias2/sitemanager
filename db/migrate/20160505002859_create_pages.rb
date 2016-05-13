@@ -12,7 +12,6 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps null: false
       t.index :title, unique: true
-      t.index :order, unique: true
     end
   end
 end
