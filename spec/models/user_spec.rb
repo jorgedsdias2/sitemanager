@@ -51,12 +51,6 @@ RSpec.describe User, type: :model do
 		expect(@user.errors[:password_confirmation].any?).to eq(true)
 	end
 
-	it "belongs to group" do
-		@user.group_id = nil
-		@user.save
-		expect(@user.errors[:group_id].any?).to eq(true)
-	end
-
 	it "be editor" do
 		@user.group_id = group_editor.id
 		@user.save
@@ -67,6 +61,12 @@ RSpec.describe User, type: :model do
 		@user.group_id = group_admin.id
 		@user.save
 		expect(@user.administrator?).to eq(true)
+	end
+
+	it "belongs to group" do
+		@user.group_id = nil
+		@user.save
+		expect(@user.errors[:group_id].any?).to eq(true)
 	end
 
 	it "have many pages" do
