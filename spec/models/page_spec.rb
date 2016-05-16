@@ -5,13 +5,46 @@ RSpec.describe Page, type: :model do
 		@page = FactoryGirl.build(:page)
 	end
 
-	let(:page_db) { FactoryGirl.create(:page, name: 'Other Page') }
+	let(:page_db) { FactoryGirl.create(:page, title: 'Other Page') }
 
-	pending "be a valid page"
-	pending "not save page without name"
-	pending "not save page if title exists"
-	pending "not save page without description"
-	pending "not save page if description has more than 255 characters"
-	pending "not save page if order is not integer"
-	pending "belongs to user"
+	it "be a valid page" do
+		@page = Page.new
+		expect(@page).to be_invalid
+	end
+
+	it "not save page without title" do
+		@page.title = nil
+		@page.save
+		expect(@page.errors[:title].any?).to eq(true)
+	end
+
+	it "not save page if title exists" do
+		@page.title = page_db.title
+		@page.save
+		expect(@page.errors[:title].any?).to eq(true)
+	end
+
+	it "not save page without description" do
+		@page.description = nil
+		@page.save
+		expect(@page.errors[:description].any?).to eq(true)
+	end
+
+	it "not save page if description has more than 255 characters" do
+		@page.description = "1" * 255 + "1"
+		@page.save
+		expect(@page.errors[:description].any?).to eq(true)
+	end
+
+	it "not save page if order is not integer" do
+		@page.order = "anystring"
+		@page.save
+		expect(@page.errors[:order].any?).to eq(true)
+	end
+
+	it "belongs to user" do
+		@page.user_id = nil
+		@page.save
+		expect(@page.errors[:user_id].any?).to eq(true)
+	end
 end
