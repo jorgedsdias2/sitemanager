@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
+	render_views
+
+=begin
 	describe "GET index" do
 		it "renders the painel layout" do
 			get :index
@@ -10,6 +13,7 @@ RSpec.describe SessionsController, type: :controller do
 		# "Painel Administrativo"
 		# "must contain welcome message"
 	end
+=end
 
 	describe "GET new" do
 		it "renders the login layout" do
@@ -20,7 +24,7 @@ RSpec.describe SessionsController, type: :controller do
 		it "must contain my site and title" do
 			get :new
 			title = assigns(:title)
-			expect(response.body).to have_text("My Site | " + title)
+			expect(response.body).to have_title("My Site | " + title)
 		end
 	end
 end
