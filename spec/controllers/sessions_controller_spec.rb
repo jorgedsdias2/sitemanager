@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
 	render_views
-	
+
 =begin
 	describe "GET index" do
-		# "when user logged in"
-		# "when user not logged in"
+		# "when user logged in render index view"
+		# "when user not logged in redirect to login_url"
 		it "renders the painel layout" do
 			get :index
 			expect(response).to render_template("painel")
