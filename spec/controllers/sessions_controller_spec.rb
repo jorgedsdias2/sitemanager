@@ -6,7 +6,7 @@ RSpec.describe SessionsController, type: :controller do
 	let(:user) { FactoryGirl.create(:user) }
 
 	describe "GET index invalid current user" do
-		before { visit login_path }
+		before { visit index_path }
 		it { should have_selector('div.alert.alert-warning', text: 'Not authorized') }
 	end
 

@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 	layout 'login'
+	before_filter :require_user, only: [:index]
 	before_filter :set_title, :only => [:new]
 
 	def index
