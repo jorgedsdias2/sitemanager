@@ -5,12 +5,20 @@ RSpec.describe SessionsController, type: :controller do
 	subject { page }
 	let(:user) { FactoryGirl.create(:user) }
 
+	describe "GET index successful" do
+		before do
+			page.set_rack_session(:user_id => user.id)
+			visit index_path
+		end
+		it { should have_content('Welcome! ' + user.name) }
+	end
+
 	describe "GET index invalid current user" do
 		before { visit index_path }
 		it { should have_selector('div.alert.alert-warning', text: 'Not authorized') }
 	end
 
-	describe "GET login" do
+	describe "GET login successful" do
 		before { visit login_path }
 		it { should have_title('My Site | Login') }
 		it { should have_content('Administrative Panel') }
