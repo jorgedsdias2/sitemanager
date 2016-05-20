@@ -2,31 +2,33 @@ require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
 	render_views
+	subject { page }
+	let(:user) { FactoryGirl.create(:user) }
 
-=begin
-	describe "GET index" do
-		# "when user logged in render index view"
-		# "when user not logged in redirect to login_url"
-		it "renders the painel layout" do
-			get :index
-			expect(response).to render_template("painel")
+	describe "GET index invalid current user" do
+		before do 
+			login(user)
+			@current_user = nil
 		end
-
-		# "Painel Administrativo"
-		# "must contain welcome message"
+		it { should have_selector('div.alert.alert-warning', text: 'Not authorized') }
 	end
-=end
 
-	describe "GET new" do
-		it "renders the login layout" do
-			get :new
-			expect(response).to render_template("login")
-		end
+	describe "GET login" do
+		before { visit login_path }
+		it { should have_title('My Site | Login') }
+		it { should have_content('Administrative Panel') }
+	end
 
-		it "must contain my site and title" do
-			get :new
-			title = assigns(:title)
-			expect(response.body).to have_title("My Site | " + title)
+	describe "POST login invalid information" do
+		before do
+			user.email = user.email.upcase
+			login(user)
 		end
+		it { should have_selector('div.alert.alert-warning', text: 'E-mail or Password is wrong') }
+	end
+
+	describe "POST login successful" do
+		before { login(user) }
+		it { should have_content('Welcome! ' + user.name) }
 	end
 end
