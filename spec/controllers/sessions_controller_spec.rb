@@ -7,7 +7,7 @@ RSpec.describe SessionsController, type: :controller do
 
 	describe "GET index successful" do
 		before do
-			page.set_rack_session(:user_id => user.id)
+			logged_as(user)
 			visit index_path
 		end
 		it { should have_content('Welcome! ' + user.name) }

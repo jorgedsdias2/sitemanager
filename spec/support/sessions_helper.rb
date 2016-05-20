@@ -5,4 +5,8 @@ module SessionsHelper
 		fill_in 'session[password]', with: user.password
 		click_button 'Login'
 	end
+
+	def logged_as(user)
+		page.set_rack_session(:user_id => user.id)
+	end
 end
