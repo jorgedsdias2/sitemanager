@@ -32,6 +32,20 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# gem ckeditor
+gem 'ckeditor'
+
+# gem bootstrap
+gem 'bootstrap-sass'
+
+# bug no heroku
+gem 'responders', '~> 2.0'
+
+# resolve problema less
+gem "therubyracer"
+gem "less-rails", '~> 2.7.1' # 2.7.1 for undefined method `register_preprocessor' for nil:NilClass
+gem "twitter-bootstrap-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
