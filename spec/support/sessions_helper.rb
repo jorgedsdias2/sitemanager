@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module SessionsHelper
 	def login(user)
 		visit login_path

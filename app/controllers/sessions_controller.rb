@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class SessionsController < ApplicationController
 	layout 'login'
 	before_filter :require_user, only: [:index]
