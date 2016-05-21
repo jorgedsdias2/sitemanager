@@ -24,6 +24,10 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
+		session[:user_id] = nil
+		respond_to do |format|
+			format.html { redirect_to login_url }
+		end
 	end
 
 	private
