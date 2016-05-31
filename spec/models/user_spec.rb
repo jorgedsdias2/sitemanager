@@ -72,4 +72,14 @@ RSpec.describe User, type: :model do
 	it "have many pages" do
 		expect(@user).to respond_to(:pages)
 	end
+
+	it "be user role" do
+		@user = User.new
+		expect(@user.role).to eq('user')
+	end
+
+	it "dont't delete administrator" do
+		@user.role = 'administrator'
+		expect(@user.destroy).to eq(false)
+	end
 end

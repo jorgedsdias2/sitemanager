@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
 	validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 	validates :group_id, presence: true
 
+	after_initialize :set_user_role
+	before_destroy :dont_delete_administrator
+
 	def editor?
 		self.group.name.downcase == 'editor'
 	end
@@ -15,4 +18,17 @@ class User < ActiveRecord::Base
 	def administrator?
 		self.group.name.downcase == 'administrator'
 	end
+
+	private
+		def set_user_role
+			if self.role != 'administrator'
+				self.role = 'user'
+			end
+		end
+
+		def dont_delete_administrator
+			if self.role == 'administrator'
+				return false
+			end
+		end
 end

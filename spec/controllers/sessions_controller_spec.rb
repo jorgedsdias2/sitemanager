@@ -13,7 +13,7 @@ RSpec.describe SessionsController, type: :controller do
 				logged_as(user)
 				visit index_path
 			end
-			it { should have_content('Welcome! ' + user.name) }
+			it { should have_content('Bem vindo! ' + user.name) }
 		end
 
 		describe "invalid current user" do
@@ -26,7 +26,7 @@ RSpec.describe SessionsController, type: :controller do
 	describe "GET login" do
 		describe "successful" do
 			before { visit login_path }
-			it { should have_title('My Site | Login') }
+			it { should have_title('Meu Site | Login') }
 			it { should have_content('Administrative Panel') }
 		end
 	end
@@ -43,7 +43,7 @@ RSpec.describe SessionsController, type: :controller do
 				user.email = user.email.upcase
 				login(user)
 			end
-			it { should have_selector('div.alert.alert-warning', text: 'E-mail or Password is wrong') }
+			it { should have_selector('div.alert.alert-warning', text: 'E-mail ou Senha inválidos') }
 		end
 	end
 

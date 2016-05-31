@@ -6,5 +6,6 @@ FactoryGirl.define do
 		u.password '123456'
 		u.password_confirmation '123456'
 		u.group_id 1
+		u.role 'user'
 	end
 end

@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.belongs_to :group, index: true
+      t.string :role
 
       t.timestamps null: false
       t.index :email, unique: true

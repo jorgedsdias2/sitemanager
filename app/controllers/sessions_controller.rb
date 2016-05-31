@@ -5,6 +5,8 @@ class SessionsController < ApplicationController
 	before_filter :set_title, :only => [:new]
 
 	def index
+		@title = 'Dashboard'
+		flash[:notice] = nil
 		render layout: 'painel'
 	end
 
@@ -18,8 +20,8 @@ class SessionsController < ApplicationController
 				session[:user_id] = @user.id
 				format.html { redirect_to index_url }
 			else
-				flash[:notice] = "E-mail or Password is wrong"
-				format.html { render 'new' }
+				flash[:notice] = "E-mail ou Senha inválidos"
+				format.html { render :new }
 			end
 		end
 	end
