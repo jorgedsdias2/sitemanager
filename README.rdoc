@@ -6,7 +6,7 @@ Gerenciador de projetos desenvolvido em Ruby on Rails
 
 Para baixar o projeto no github
 
-  git clone git@github.com:jorgedsdias/manager.git
+  git clone git@github.com:jorgedsdias/sitemanager.git
   
 Para atualizar a versão do projeto
 
