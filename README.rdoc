@@ -1,4 +1,4 @@
-= Gerenciador de sites
+= Gerenciador de sites {<img src="https://codeclimate.com/github/jorgedsdias/sitemanager/badges/gpa.svg" />}[https://codeclimate.com/github/jorgedsdias/sitemanager]
 
 Gerenciador de projetos desenvolvido em Ruby on Rails
 
@@ -37,5 +37,3 @@ Instalar gem para conexão com Postgresql
 == Suíte de Testes do Sistema
 
   rspec spec/*
-  
-{<img src="https://codeclimate.com/github/jorgedsdias/sitemanager/badges/gpa.svg" />}[https://codeclimate.com/github/jorgedsdias/sitemanager]
