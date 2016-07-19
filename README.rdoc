@@ -37,3 +37,5 @@ Instalar gem para conexão com Postgresql
 == Suíte de Testes do Sistema
 
   rspec spec/*
+  
+<a href="https://codeclimate.com/github/jorgedsdias/sitemanager"><img src="https://codeclimate.com/github/jorgedsdias/sitemanager/badges/gpa.svg" /></a>
