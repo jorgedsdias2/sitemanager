@@ -38,4 +38,4 @@ Instalar gem para conexão com Postgresql
 
   rspec spec/*
   
-[![Code Climate](https://codeclimate.com/github/jorgedsdias/sitemanager/badges/gpa.svg)](https://codeclimate.com/github/jorgedsdias/sitemanager)
+{<img src="https://codeclimate.com/github/jorgedsdias/sitemanager/badges/gpa.svg" />}[https://codeclimate.com/github/jorgedsdias/sitemanager]
