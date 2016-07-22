@@ -36,4 +36,5 @@ Instalar gem para conexão com Postgresql
   
 == Suíte de Testes do Sistema
 
+RSpec 3.4.4
   rspec -f d spec/*

@@ -20,6 +20,7 @@ gem "less-rails", '~> 2.7.1' # 2.7.1 for undefined method `register_preprocessor
 gem "twitter-bootstrap-rails"
 
 gem 'paperclip'
+gem "paperclip-storage-ftp"
 
 group :development, :test do
   gem 'byebug'

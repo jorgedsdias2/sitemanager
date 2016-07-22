@@ -119,6 +119,8 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    paperclip-storage-ftp (1.2.7)
+      paperclip
     pg (0.18.1)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -231,6 +233,7 @@ DEPENDENCIES
   jquery-rails
   less-rails (~> 2.7.1)
   paperclip
+  paperclip-storage-ftp
   pg
   rack_session_access
   rails (= 4.2.6)
