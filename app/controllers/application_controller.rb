@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
 		end
 
 		def require_user
-			redirect_to login_url, notice: 'Not authorized' unless current_user
+			redirect_to login_url, notice: t('default.validations.not_authorized') unless current_user
 		end	
 end

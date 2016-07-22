@@ -43,6 +43,12 @@ RSpec.describe Page, type: :model do
 		expect(@page.errors[:order].any?).to eq(true)
 	end
 
+	it "not save page without status" do
+		@page.status = nil
+		@page.save
+		expect(@page.errors[:status].any?).to eq(true)
+	end
+
 	it "belongs to user" do
 		@page.user_id = nil
 		@page.save

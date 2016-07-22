@@ -8,6 +8,7 @@ FactoryGirl.define do
 		p.link 'http://www.page.com.br'
 		p.target '_self'
 		p.order 1
+		p.status 'A'
 		p.user_id 1
 	end
 end

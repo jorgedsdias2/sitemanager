@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Meu Site | <%= @title %></title>
+    <title><%= t('default.my_site_title', title: @title) %></title>
 
     <%= stylesheet_link_tag 'application' %>
 

@@ -9,6 +9,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :link
       t.string :target
       t.integer :order
+      t.string :status
       t.belongs_to :user, index: true
 
       t.timestamps null: false

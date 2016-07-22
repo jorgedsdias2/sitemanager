@@ -1,0 +1,13 @@
+pt-BR:
+  default:
+    welcome_name: "Bem vindo! %{name}"
+    administrative_panel: "Painel Administrativo"
+    administrative_panel_title: "Painel Administrativo | %{title}"
+    my_site: "Meu Site"
+    my_site_title: "Meu Site | %{title}"
+    change_password: "Alterar Senha"
+    register_new: "Cadastrar Novo(a)"
+    list_all: "Listar Todo(a)s"
+    validations:
+      not_authorized: "Não autorizado"
+      wrong_email_password: "E-mail ou Senha inválidos"

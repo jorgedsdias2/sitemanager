@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Bem vindo! <%= current_user.name %></h1>
+        <h1 class="page-header"><%= t('default.welcome_name', name: current_user.name) %></h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -19,13 +19,13 @@
                     </div>
                 </div>
             </div>
-                <%= link_to '                
-                    <div class="panel-footer">
-                        <span class="pull-left">Páginas</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>'.html_safe, pages_path
-                %>
+            <%= link_to "
+                <div class='panel-footer'>
+                    <span class='pull-left'>#{t('activerecord.models.page.other')}</span>
+                    <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
+                    <div class='clearfix'></div>
+                </div>".html_safe, pages_path
+            %>
         </div>
     </div>
     <div class="col-lg-3 col-md-6">
@@ -41,13 +41,13 @@
                     </div>
                 </div>
             </div>
-                <%= link_to '                
-                    <div class="panel-footer">
-                        <span class="pull-left">Usuários</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>'.html_safe, users_path 
-                %>
+            <%= link_to "
+                <div class='panel-footer'>
+                    <span class='pull-left'>#{t('activerecord.models.user.other')}</span>
+                    <span class='pull-right'><i class='fa fa-arrow-circle-right'></i></span>
+                    <div class='clearfix'></div>
+                </div>".html_safe, users_path 
+            %>
         </div>
     </div>
 </div>
