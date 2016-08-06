@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 	def index
 		@title = 'Dashboard'
 		flash[:notice] = nil
-		render layout: 'painel'
+		render layout: 'panel'
 	end
 
 	def new
