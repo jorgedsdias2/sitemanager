@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddAttachmentImageToUploads < ActiveRecord::Migration
   def self.up
     change_table :uploads do |t|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Myftp
 	extend ActiveSupport::Concern
 

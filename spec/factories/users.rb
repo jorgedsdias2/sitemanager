@@ -9,3 +9,4 @@ FactoryGirl.define do
 		u.role 'user'
 	end
 end
+
