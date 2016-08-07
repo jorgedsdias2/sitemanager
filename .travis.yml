@@ -1,4 +1,5 @@
 language: ruby
 rvm:
   - 2.1.3
+script: rake db:migrate
 script: bundle exec rspec spec
