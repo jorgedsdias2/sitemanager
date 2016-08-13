@@ -15,5 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+/public/images
 /public/assets
 /db/schema.rb

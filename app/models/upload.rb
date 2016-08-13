@@ -3,7 +3,7 @@ class Upload < ActiveRecord::Base
 	include Myftp
 
 	belongs_to :page
-	belongs_to :subpage
+	validates :page_id, presence: true
 
 	if self.use_ftp?
 		has_attached_file :image,
