@@ -34,7 +34,7 @@ class Upload < ActiveRecord::Base
 
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-	def get_path(size)
-		Rails.root + "public/images/#{size}/#{self.id}/#{self.image_file_name}"
+	def get_path(style)
+		Rails.root + "public/images/#{style}/#{self.id}/#{self.image_file_name}"
 	end
 end
