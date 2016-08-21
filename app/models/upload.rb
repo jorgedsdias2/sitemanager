@@ -5,8 +5,6 @@ class Upload < ActiveRecord::Base
 	belongs_to :page
 	validates :page_id, presence: true
 
-	after_initialize :set_path
-
 	if self.use_ftp?
 		has_attached_file :image,
 		{
@@ -36,8 +34,7 @@ class Upload < ActiveRecord::Base
 
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-	private
-		def set_path
-			self.path = Rails.root + "public/images/original/#{self.id}/#{self.image_file_name}"
-		end
+	def get_path(size)
+		Rails.root + "public/images/#{size}/#{self.id}/#{self.image_file_name}"
+	end
 end

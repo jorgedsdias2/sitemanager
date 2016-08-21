@@ -19,12 +19,12 @@ RSpec.describe Upload, type: :model do
 
 	it "success upload image" do
 		@upload.save
-		expect(File.exists?(@upload.path)).to eq(true)
+		expect(File.exists?(@upload.get_path('original'))).to eq(true)
 	end
 
 	it "success delete upload" do
 		@upload.save
 		@upload.image.destroy
-		expect(File.exists?(@upload.path)).to eq(false)
+		expect(File.exists?(@upload.get_path('original'))).to eq(false)
 	end
 end
