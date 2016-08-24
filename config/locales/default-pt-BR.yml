@@ -11,3 +11,4 @@ pt-BR:
     validations:
       not_authorized: "Não autorizado"
       wrong_email_password: "E-mail ou Senha inválidos"
+      dont_delete_administrator: "Não se pode deletar um usuário administrator"
