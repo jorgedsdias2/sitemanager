@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
 
 		def dont_delete_administrator
 			if self.role == 'administrator'
+				errors.add(:base, t('default.validations.dont_delete_administrator'))
 				return false
 			end
 		end
