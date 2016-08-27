@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
+	include Utilities
+
 	belongs_to :group
 	has_many :pages
   	has_secure_password

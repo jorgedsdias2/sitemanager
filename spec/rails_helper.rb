@@ -7,7 +7,6 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'support/sessions_helper'
-require 'support/utilities'
 require 'rack_session_access/capybara'
 # Add additional requires below this line. Rails is not loaded until this point!
 
