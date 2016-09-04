@@ -12,3 +12,7 @@ pt-BR:
       not_authorized: "Não autorizado"
       wrong_email_password: "E-mail ou Senha inválidos"
       dont_delete_administrator: "Não se pode deletar um usuário administrator"
+    user:
+      create_success: "Usuário criado com sucesso!"
+      update_success: "Usuário alterado com sucesso!"
+      destroy_success: "Usuário deletado com sucesso!"

@@ -4,9 +4,11 @@ pt-BR:
         page:
           one: "Página"
           other: "Páginas"
+          list: "Listagem de Páginas"
         user:
           one: "Usuário"
           other: "Usuários"
+          list: "Listagem de Usuários"
     attributes:
       page:
         title: "Título"

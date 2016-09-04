@@ -20,6 +20,11 @@ RSpec.describe SessionsController, type: :controller do
 			before { visit index_path }
 			it { should have_selector('div.alert.alert-warning', text: t('default.validations.not_authorized')) }
 		end
+
+		describe "renders the panel template" do
+			before { login(user) }
+			it { should render_template("panel") }
+		end
 	end
 
 	# GET login
@@ -27,7 +32,12 @@ RSpec.describe SessionsController, type: :controller do
 		describe "successful" do
 			before { visit login_path }
 			it { should have_title(t('default.my_site_title', title: "Login")) }
-			it { should have_content(t('default.administrative_panel')) }
+			# it { should have_content(t('default.administrative_panel')) }
+		end
+
+		describe "renders the login template" do
+			before { visit login_path }
+			it { should render_template("login") }
 		end
 	end
 
