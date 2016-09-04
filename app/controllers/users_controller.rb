@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class UsersController < ApplicationController
 	layout 'panel'
-	#before_filter :require_user
+	before_filter :require_user
 	before_filter :set_title
 	before_action :set_user, only: [:edit, :update, :destroy]
 	skip_before_filter :verify_authenticity_token, :only => [:destroy]
