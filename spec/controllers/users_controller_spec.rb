@@ -4,7 +4,8 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
 	render_views
 	subject{ page }
-	let(:user) { FactoryGirl.create(:user) }
+	let(:group) { FactoryGirl.create(:group) }
+	let(:user) { FactoryGirl.create(:user, group_id: group.id) }
 
 	# GET index
 	describe "GET index" do

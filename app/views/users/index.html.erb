@@ -15,16 +15,16 @@
 
 <ul class="breadcrumb">
     <li><%= link_to 'Home', dashboard_url %></li>
-    <li class="active"><%= t('activerecord.models.user.list') %></li>
+    <li class="active"><%= t('text.user.list') %></li>
 </ul>
 
 <div class="row">
   <div class="col-lg-12">
       <div class="panel panel-default">
           <div class="panel-heading">
-              <%= t('activerecord.models.user.list') %>
+              <%= t('text.user.list') %>
               <div class="pull-right">
-                <%= link_to '<i class="fa fa-edit fa-fw"></i>Cadastrar Novo Usuário'.html_safe, new_user_path %>
+                <%= link_to "<i class='fa fa-edit fa-fw'></i>#{t('text.user.new')}".html_safe, new_user_path %>
               </div>
           </div>
           <!-- /.panel-heading -->
@@ -34,9 +34,9 @@
                       <thead>
                           <tr>
                               <th>ID</th>
-                              <th>Nome</th>
-                              <th>Data</th>
-                              <% if current_user %>
+                              <th><%= t('activerecord.attributes.user.name') %></th>
+                              <th><%= t('text.data') %></th>
+                              <% if current_user && (current_user.editor? || current_user.administrator?) %>
                                 <th></th>
                               <% end %>
                           </tr>
@@ -48,15 +48,17 @@
                                   <td><%= user.id %></td>
                                   <td><%= user.name %></td>
                                   <td><%= user.created_at.strftime('%d/%m/%Y') %></td>
-                                  <td>
-                                      <%= link_to image_tag('edit.png', title: 'Editar'), edit_user_path(user) %>&nbsp;&nbsp;
-                                      <%= link_to image_tag('remove.png', title: 'Remover'), user, method: :delete, data: { confirm: 'Quer mesmo remover esse usuário?' } %>
-                                  </td>
+                                  <% if current_user && (current_user.editor? || current_user.administrator?) %>
+                                    <td>
+                                        <%= link_to image_tag('edit.png', title: 'Editar'), edit_user_path(user) %>&nbsp;&nbsp;
+                                        <%= link_to image_tag('remove.png', title: 'Remover'), user, method: :delete, data: { confirm: t('text.user.delete') } %>
+                                    </td>
+                                  <% end %>
                               </tr>
                             <% end %>
                           <% else %>
                             <tr class="odd gradeX">
-                              <td colspan="4">Nenhum usuário encontrado</td>
+                              <td colspan="4"><%= t('text.user.not_found') %></td>
                             </tr>
                           <% end %>
                       </tbody>

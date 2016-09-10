@@ -13,12 +13,12 @@ RSpec.describe SessionsController, type: :controller do
 				logged_as(user)
 				visit index_path
 			end
-			it { should have_content(t('default.welcome_name', name: user.name)) }
+			it { should have_content(t('text.welcome_name', name: user.name)) }
 		end
 
 		describe "invalid current user" do
 			before { visit index_path }
-			it { should have_selector('div.alert.alert-warning', text: t('default.validations.not_authorized')) }
+			it { should have_selector('div.alert.alert-warning', text: t('text.validations.not_authorized')) }
 		end
 
 		describe "renders the panel template" do
@@ -31,8 +31,8 @@ RSpec.describe SessionsController, type: :controller do
 	describe "GET login" do
 		describe "successful" do
 			before { visit login_path }
-			it { should have_title(t('default.my_site_title', title: "Login")) }
-			# it { should have_content(t('default.administrative_panel')) }
+			it { should have_title(t('text.my_site_title', title: "Login")) }
+			# it { should have_content(t('text.administrative_panel')) }
 		end
 
 		describe "renders the login template" do
@@ -53,7 +53,7 @@ RSpec.describe SessionsController, type: :controller do
 				user.email = user.email.upcase
 				login(user)
 			end
-			it { should have_selector('div.alert.alert-warning', text: t('default.validations.wrong_email_password')) }
+			it { should have_selector('div.alert.alert-warning', text: t('text.validations.wrong_email_password')) }
 		end
 	end
 

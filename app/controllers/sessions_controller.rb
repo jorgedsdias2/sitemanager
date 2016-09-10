@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 				session[:user_id] = @user.id
 				format.html { redirect_to index_url }
 			else
-				flash[:notice] = t('default.validations.wrong_email_password')
+				flash[:notice] = t('text.validations.wrong_email_password')
 				format.html { render :new }
 			end
 		end

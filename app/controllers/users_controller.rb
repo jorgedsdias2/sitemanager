@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
 		respond_to do |format|
 			if @user.save
-				format.html { redirect_to users_url, notice: t('default.user.create_success'), alert: "success" }
+				format.html { redirect_to users_url, notice: t('text.user.create_success'), alert: "success" }
 			else
 				format.html { render :new }
 			end
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 	def update
 		respond_to do |format|
 			if @user.update(user_params)
-				format.html { redirect_to users_url, notice: t('default.user.update_success'), alert: "success" }
+				format.html { redirect_to users_url, notice: t('text.user.update_success'), alert: "success" }
 			else
 				format.html { render :edit }
 			end
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 		@user.destroy
 
 		respond_to do |format|
-			format.html { redirect_to users_url, notice: t('default.user.destroy_success'), alert: "success" }
+			format.html { redirect_to users_url, notice: t('text.user.destroy_success'), alert: "success" }
 		end
 	end
 

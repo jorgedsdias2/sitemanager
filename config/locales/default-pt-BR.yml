@@ -1,5 +1,5 @@
 pt-BR:
-  default:
+  text:
     welcome_name: "Bem vindo! %{name}"
     administrative_panel: "Painel Administrativo"
     administrative_panel_title: "Painel Administrativo | %{title}"
@@ -8,11 +8,16 @@ pt-BR:
     change_password: "Alterar Senha"
     register_new: "Cadastrar Novo(a)"
     list_all: "Listar Todo(a)s"
+    data: "Data"
     validations:
       not_authorized: "Não autorizado"
       wrong_email_password: "E-mail ou Senha inválidos"
       dont_delete_administrator: "Não se pode deletar um usuário administrator"
     user:
+      list: "Listagem de Usuários"
+      new: "Cadastrar Novo Usuário"
+      delete: "Quer mesmo remover esse usuário?"
+      not_found: "Nenhum usuário encontrado"
       create_success: "Usuário criado com sucesso!"
       update_success: "Usuário alterado com sucesso!"
       destroy_success: "Usuário deletado com sucesso!"
