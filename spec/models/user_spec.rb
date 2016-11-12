@@ -83,3 +83,4 @@ RSpec.describe User, type: :model do
 		expect(@user.destroy).to eq(false)
 	end
 end
+

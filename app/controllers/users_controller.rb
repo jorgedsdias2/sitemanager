@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 	before_filter :require_user
 	before_filter :set_title
 	before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :list_group, only: [:new, :edit]
 	skip_before_filter :verify_authenticity_token, :only => [:destroy]
 
 	def index
@@ -24,7 +25,10 @@ class UsersController < ApplicationController
 			if @user.save
 				format.html { redirect_to users_url, notice: t('text.user.create_success'), alert: "success" }
 			else
-				format.html { render :new }
+				format.html {
+          list_group
+          render :new
+        }
 			end
 		end
 	end
@@ -34,7 +38,10 @@ class UsersController < ApplicationController
 			if @user.update(user_params)
 				format.html { redirect_to users_url, notice: t('text.user.update_success'), alert: "success" }
 			else
-				format.html { render :edit }
+				format.html {
+          list_group
+          render :edit
+        }
 			end
 		end
 	end
@@ -54,7 +61,11 @@ class UsersController < ApplicationController
 
 		def set_user
 			@user = User.find(params[:id])
-		end
+    end
+
+    def list_group
+      @group = Group.order('id DESC').all
+    end
 
 		def user_params
 			params.require(:user).permit(:name, :password, :email, :group_id)

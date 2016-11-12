@@ -54,17 +54,40 @@ RSpec.describe UsersController, type: :controller do
         create_new_user(new_user)
       end
 
-      it { should have_text(t('text.user.create_success')) }
+      it { should have_selector('div.alert.alert-success', text: t('text.user.create_success')) }
     end
 
-=begin
     describe "unsuccessful" do
       before do
         logged_as(user)
-        visit users_path(user)
+        new_user.name = ''
+        create_new_user(new_user)
       end
+
+      it { should have_text(t('text.validations.dont_save_register')) }
     end
-=end
+  end
+
+  # POST update
+  describe "POST update" do
+    describe "successful" do
+      before do
+        logged_as(user)
+        update_user(user)
+      end
+
+      it { should have_selector('div.alert.alert-success', text: t('text.user.update_success')) }
+    end
+
+    describe "unsuccessful" do
+      before do
+        logged_as(user)
+        user.name = ''
+        update_user(user)
+      end
+
+      it { should have_text(t('text.validations.dont_save_register')) }
+    end
   end
 
   describe "renders the panel template" do
