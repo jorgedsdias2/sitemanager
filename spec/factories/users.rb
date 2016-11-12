@@ -8,7 +8,17 @@ FactoryGirl.define do
 		u.password_confirmation '123456'
 		u.group_id 1
 		u.role 'user'
-	end
+  end
+
+  factory :other_user do |u|
+    u.id 2
+    u.name 'Other User'
+    u.email 'other@email.com'
+    u.password '123456'
+    u.password_confirmation '123456'
+    u.group_id 1
+    u.role 'user'
+  end
 end
 
 
