@@ -33,11 +33,11 @@
                       <%= f.text_field :email, class: 'form-control' %>
                     </div>
                     <div class="form-group">
-                      <%= f.label :senha %><br>
+                      <%= f.label :password %><br>
                       <%= f.password_field :password, class: 'form-control' %>
                     </div>
                     <div class="form-group">
-                      <%= f.label t('activerecord.models.user.password_confirmation') %><br>
+                      <%= f.label :password_confirmation %><br>
                       <%= f.password_field :password_confirmation, class: 'form-control' %>
                     </div>
                     <%= f.submit t('text.register'), class: 'btn btn-default' %>
