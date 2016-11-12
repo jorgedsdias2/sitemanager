@@ -12,6 +12,7 @@ module UsersHelper
 
   private
   def user_form(user)
+    puts user.inspect
     group = FactoryGirl.build(:group, name: 'Administrator')
     fill_in 'user[name]', with: user.name
     fill_in 'user[email]', with: user.email
