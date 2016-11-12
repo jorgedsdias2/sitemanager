@@ -31,7 +31,19 @@ RSpec.describe UsersController, type: :controller do
 
 			it { should have_text(t('text.user.register')) }
 		end
-	end
+  end
+
+  # GET edit
+  describe "GET edit" do
+    describe "edit user" do
+			before do
+				logged_as(user)
+        visit edit_user_path(user)
+      end
+
+      it { should have_text(t('text.user.update')) }
+		end
+  end
 
 	describe "renders the panel template" do
 		before do

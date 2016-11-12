@@ -21,6 +21,7 @@ pt-BR:
       new: "Cadastrar Novo Usuário"
       delete: "Quer mesmo remover esse usuário?"
       register: "Cadastro de usuários"
+      update: "Editar usuário"
       not_found: "Nenhum usuário encontrado"
       create_success: "Usuário criado com sucesso!"
       update_success: "Usuário alterado com sucesso!"
