@@ -4,13 +4,9 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
   render_views
   subject { page }
-  let(:group) { FactoryGirl.create(:group) }
+  let(:group) { FactoryGirl.create(:group, name: 'Administrator') }
   let(:user) { FactoryGirl.create(:user, group_id: group.id) }
-
-  before(:each) do
-    @new_user = FactoryGirl.build(:user)
-    @new_user.group_id = group.id
-  end
+  let(:new_user) { FactoryGirl.build(:user, email: 'other@email.com.br') }
 
   # GET index
   describe "GET index" do
@@ -55,12 +51,7 @@ RSpec.describe UsersController, type: :controller do
     describe "successful" do
       before do
         logged_as(user)
-        visit new_user_path
-        fill_in 'user[name]', with: @new_user.name
-        fill_in 'user[email]', with: @new_user.email
-        fill_in 'user[password]', with: '123456'
-        fill_in 'user[password_confirmation]', with: '123456'
-        click_button t('text.register')
+        create_new_user(new_user)
       end
 
       it { should have_text(t('text.user.create_success')) }

@@ -7,6 +7,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'support/sessions_helper'
+require 'support/users_helper'
 require 'rack_session_access/capybara'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -61,5 +62,6 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods # Include FactoryGirl so we can use 'create' instead of 'FactoryGirl.create'
   config.include Capybara::DSL
   config.include SessionsHelper
+  config.include UsersHelper
   config.include Utilities
 end
