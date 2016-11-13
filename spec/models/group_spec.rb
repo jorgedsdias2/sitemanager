@@ -3,10 +3,10 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
 	before(:each) do
-		@group = FactoryGirl.build(:groups)
+		@group = FactoryGirl.build(:group)
 	end
 
-	let(:group_bd) { FactoryGirl.create(:groups, name: 'Other Name') }
+	let(:group_bd) { FactoryGirl.create(:group, name: 'Other Name') }
 
 	it 'be a valid group' do
 		@group = Group.new
