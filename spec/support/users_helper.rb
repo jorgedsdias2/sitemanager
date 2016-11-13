@@ -12,7 +12,7 @@ module UsersHelper
 
   private
   def user_form(user)
-    group = FactoryGirl.build(:group, name: 'Administrator')
+    group = FactoryGirl.build(:groups, name: 'Administrator')
     fill_in 'user[name]', with: user.name
     fill_in 'user[email]', with: user.email
     select group.name, from: 'user[group_id]'

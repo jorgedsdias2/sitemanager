@@ -7,8 +7,8 @@ RSpec.describe User, type: :model do
 	end
 
 	let(:user_bd) { FactoryGirl.create(:user, email: 'user1@email.com') }
-	let(:group_admin) { FactoryGirl.create(:group, name: 'Administrator') }
-	let(:group_editor) { FactoryGirl.create(:group, name: 'Editor') }
+	let(:group_admin) { FactoryGirl.create(:groups, name: 'Administrator') }
+	let(:group_editor) { FactoryGirl.create(:groups, name: 'Editor') }
 
 	it "be a valid user" do
 		@user = User.new

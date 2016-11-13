@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 Rails.application.routes.draw do
 	resources :users
+  resources :groups
 	resources :pages
 	resources :sessions
 	

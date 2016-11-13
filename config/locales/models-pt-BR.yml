@@ -2,24 +2,27 @@ pt-BR:
   activerecord:
     models:
         page:
-          one: "Página"
-          other: "Páginas"
+          one: 'Página'
+          other: 'Páginas'
         user:
-          one: "Usuário"
-          other: "Usuários"          
+          one: 'Usuário'
+          other: 'Usuários'
+        group:
+          one: 'Grupo'
+          other: 'Grupos'
     attributes:
       page:
-        title: "Título"
-        summary: "Resumo"
-        description: "Descrição"
-        nickname: "Apelido"
-        link: "Link"
-        target: "Target"
-        order: "Ordem"
-        status: "Status"
+        title: 'Título'
+        summary: 'Resumo'
+        description: 'Descrição'
+        nickname: 'Apelido'
+        link: 'Link'
+        target: 'Target'
+        order: 'Ordem'
+        status: 'Status'
       user:
-        name: "Nome"
-        email: "E-mail"
-        password: "Senha"
-        password_confirmation: "Confirmação de Senha"
-        role: "Grupo"
+        name: 'Nome'
+        email: 'E-mail'
+        password: 'Senha'
+        password_confirmation: 'Confirmação de Senha'
+        role: 'Grupo'

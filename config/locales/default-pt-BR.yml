@@ -28,3 +28,13 @@ pt-BR:
       create_success: "Usuário criado com sucesso!"
       update_success: "Usuário alterado com sucesso!"
       destroy_success: "Usuário deletado com sucesso!"
+    group:
+      list: "Listagem de Grupos"
+      new: "Cadastrar Novo Grupo"
+      delete: "Quer mesmo remover esse grupo?"
+      register: "Cadastro de grupos"
+      update: "Editar grupo"
+      not_found: "Nenhum grupo encontrado"
+      create_success: "Grupo criado com sucesso!"
+      update_success: "Grupo alterado com sucesso!"
+      destroy_success: "Grupo deletado com sucesso!"
