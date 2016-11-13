@@ -21,7 +21,7 @@ class GroupController < ApplicationController
     @group = Group.new(group_params)
 
     respond_to do |format|
-      if @user.save
+      if @group.save
         format.html { redirect_to groups_url, notice: t('text.group.create_success'), alert: 'success' }
       else
         format.html { render :new }
@@ -31,7 +31,7 @@ class GroupController < ApplicationController
 
   def update
     respond_to do |format|
-      if @user.update(group_params)
+      if @group.update(group_params)
         format.html { redirect_to groups_url, notice: t('text.group.update_success'), alert: 'success' }
       else
         format.html { render :edit }
@@ -40,7 +40,7 @@ class GroupController < ApplicationController
   end
 
   def destroy
-    @user.destroy
+    @group.destroy
 
     respond_to do |format|
       format.html { redirect_to groups_url, notice: t('text.group.destroy_success'), alert: 'success' }

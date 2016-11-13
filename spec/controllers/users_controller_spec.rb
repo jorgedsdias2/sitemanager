@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
   render_views
   subject { page }
-  let(:groups) { FactoryGirl.create(:groups, name: 'Administrator') }
+  let(:group) { FactoryGirl.create(:group, name: 'Administrator') }
   let(:user) { FactoryGirl.create(:user, group_id: group.id) }
   let(:new_user) { FactoryGirl.build(:user, name: 'Other User', email: 'other@email.com') }
 

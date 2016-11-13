@@ -1,40 +1,40 @@
 pt-BR:
   text:
-    welcome_name: "Bem vindo! %{name}"
-    administrative_panel: "Painel Administrativo"
-    administrative_panel_title: "Painel Administrativo | %{title}"
-    my_site: "Meu Site"
-    my_site_title: "Meu Site | %{title}"
-    change_password: "Alterar Senha"
-    register: "Cadastrar"
-    clean: "Limpar"
-    register_new: "Cadastrar Novo(a)"
-    list_all: "Listar Todo(a)s"
-    data: "Data"
+    welcome_name: 'Bem vindo! %{name}'
+    administrative_panel: 'Painel Administrativo'
+    administrative_panel_title: 'Painel Administrativo | %{title}'
+    my_site: 'Meu Site'
+    my_site_title: 'Meu Site | %{title}'
+    change_password: 'Alterar Senha'
+    register: 'Cadastrar'
+    clean: 'Limpar'
+    register_new: 'Cadastrar Novo(a)'
+    list_all: 'Listar Todo(a)s'
+    data: 'Data'
     edit: 'Edit'
     remove: 'Remover'
     validations:
-      not_authorized: "Não autorizado"
-      wrong_email_password: "E-mail ou Senha inválidos"
-      dont_delete_administrator: "Não se pode deletar um usuário administrator"
-      dont_save_register: "proibindo este usuário de ser salvo"
+      not_authorized: 'Não autorizado'
+      wrong_email_password: 'E-mail ou Senha inválidos'
+      dont_delete_administrator: 'Não se pode deletar um usuário administrator'
+      dont_save_register: 'proibindo este usuário de ser salvo'
     user:
-      list: "Listagem de Usuários"
-      new: "Cadastrar Novo Usuário"
-      delete: "Quer mesmo remover esse usuário?"
-      register: "Cadastro de usuários"
-      update: "Editar usuário"
-      not_found: "Nenhum usuário encontrado"
-      create_success: "Usuário criado com sucesso!"
-      update_success: "Usuário alterado com sucesso!"
-      destroy_success: "Usuário deletado com sucesso!"
+      list: 'Listagem de Usuários'
+      new: 'Cadastrar Novo Usuário'
+      delete: 'Quer mesmo remover esse usuário?'
+      register: 'Cadastro de usuários'
+      update: 'Editar usuário'
+      not_found: 'Nenhum usuário encontrado'
+      create_success: 'Usuário criado com sucesso!'
+      update_success: 'Usuário alterado com sucesso!'
+      destroy_success: 'Usuário deletado com sucesso!'
     group:
-      list: "Listagem de Grupos"
-      new: "Cadastrar Novo Grupo"
-      delete: "Quer mesmo remover esse grupo?"
-      register: "Cadastro de grupos"
-      update: "Editar grupo"
-      not_found: "Nenhum grupo encontrado"
-      create_success: "Grupo criado com sucesso!"
-      update_success: "Grupo alterado com sucesso!"
-      destroy_success: "Grupo deletado com sucesso!"
+      list: 'Listagem de Grupos'
+      new: 'Cadastrar Novo Grupo'
+      delete: 'Quer mesmo remover esse grupo?'
+      register: 'Cadastro de grupos'
+      update: 'Editar grupo'
+      not_found: 'Nenhum grupo encontrado'
+      create_success: 'Grupo criado com sucesso!'
+      update_success: 'Grupo alterado com sucesso!'
+      destroy_success: 'Grupo deletado com sucesso!'
