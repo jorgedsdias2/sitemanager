@@ -9,22 +9,22 @@ RSpec.describe UsersController, type: :controller do
   let(:new_user) { FactoryGirl.build(:user, name: 'Other User', email: 'other@email.com') }
 
   # GET index
-  describe "GET index" do
-    describe "list all users" do
+  describe 'GET index' do
+    describe 'list all users' do
       before do
         logged_as(user)
         visit users_path
       end
 
       it { should have_selector('.table tbody>tr', :minimum => 1) }
-      #it { puts all(".table tbody>tr").count }
+      #it { puts all('.table tbody>tr').count }
       #it { expect(assigns('users')).to eq([user]) }
     end
   end
 
   # GET new
-  describe "GET new" do
-    describe "new user" do
+  describe 'GET new' do
+    describe 'new user' do
       before do
         logged_as(user)
         visit new_user_path
@@ -35,8 +35,8 @@ RSpec.describe UsersController, type: :controller do
   end
 
   # GET edit
-  describe "GET edit" do
-    describe "edit user" do
+  describe 'GET edit' do
+    describe 'edit user' do
       before do
         logged_as(user)
         visit edit_user_path(user)
@@ -47,8 +47,8 @@ RSpec.describe UsersController, type: :controller do
   end
 
   # POST create
-  describe "POST create" do
-    describe "successful" do
+  describe 'POST create' do
+    describe 'successful' do
       before do
         logged_as(user)
         create_new_user(new_user)
@@ -57,7 +57,7 @@ RSpec.describe UsersController, type: :controller do
       it { should have_selector('div.alert.alert-success', text: t('text.user.create_success')) }
     end
 
-    describe "unsuccessful" do
+    describe 'unsuccessful' do
       before do
         logged_as(user)
         new_user.name = ''
@@ -69,8 +69,8 @@ RSpec.describe UsersController, type: :controller do
   end
 
   # POST update
-  describe "POST update" do
-    describe "successful" do
+  describe 'POST update' do
+    describe 'successful' do
       before do
         logged_as(user)
         update_user(user)
@@ -79,7 +79,7 @@ RSpec.describe UsersController, type: :controller do
       it { should have_selector('div.alert.alert-success', text: t('text.user.update_success')) }
     end
 
-    describe "unsuccessful" do
+    describe 'unsuccessful' do
       before do
         logged_as(user)
         user.name = ''
@@ -90,12 +90,12 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  describe "renders the panel template" do
+  describe 'renders the panel template' do
     before do
       logged_as(user)
       visit users_path
     end
 
-    it { should render_template("panel") }
+    it { should render_template('panel') }
   end
 end
