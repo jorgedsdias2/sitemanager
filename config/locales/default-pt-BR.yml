@@ -11,6 +11,8 @@ pt-BR:
     register_new: "Cadastrar Novo(a)"
     list_all: "Listar Todo(a)s"
     data: "Data"
+    edit: 'Edit'
+    remove: 'Remover'
     validations:
       not_authorized: "Não autorizado"
       wrong_email_password: "E-mail ou Senha inválidos"

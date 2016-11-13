@@ -51,8 +51,8 @@
                       <td><%= user.created_at.strftime('%d/%m/%Y') %></td>
                       <% if current_user && (current_user.editor? || current_user.administrator?) %>
                           <td>
-                            <%= link_to image_tag('edit.png', title: 'Editar'), edit_user_path(user) %>&nbsp;&nbsp;
-                            <%= link_to image_tag('remove.png', title: 'Remover'), user, method: :delete, data: {confirm: t('text.user.delete')} %>
+                            <%= link_to image_tag('edit.png', title: t('text.edit')), edit_user_path(user) %>&nbsp;&nbsp;
+                            <%= link_to image_tag('remove.png', title: t('text.remove')), user, method: :delete, data: {confirm: t('text.user.delete')}, class: 'remove' %>
                           </td>
                       <% end %>
                     </tr>

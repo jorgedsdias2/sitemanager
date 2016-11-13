@@ -90,6 +90,19 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  # DELETE destroy
+  describe 'DELETE destroy' do
+    describe 'successful' do
+      before do
+        logged_as(user)
+        create_new_user(new_user)
+        first('a.remove').click
+      end
+
+      it { should have_selector('div.alert.alert-success', text: t('text.user.destroy_success')) }
+    end
+  end
+
   describe 'renders the panel template' do
     before do
       logged_as(user)
