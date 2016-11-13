@@ -1,2 +1,24 @@
-<h1>Group#edit</h1>
-<p>Find me in app/views/group/edit.html.erb</p>
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header"><%= t('activerecord.models.group.other') %></h1>
+  </div>
+  <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+<% if flash[:notice] %>
+    <div class="alert alert-<%= alert %>" role="alert">
+      <p id="notice"><%= notice %></p>
+    </div>
+<% end %>
+
+<ul class="breadcrumb">
+  <li><%= link_to 'Home', dashboard_url %></li>
+  <li><%= link_to t('text.group.list'), groups_path %></li>
+  <li class="active"><%= t('text.group.update') %></li>
+</ul>
+
+<div class="row">
+  <%= render 'form' %>
+</div>
+<!-- /.row -->

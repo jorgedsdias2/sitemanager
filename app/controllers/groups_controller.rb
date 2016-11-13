@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class GroupController < ApplicationController
+class GroupsController < ApplicationController
   layout 'panel'
   before_filter :require_user
   before_filter :set_title
@@ -53,7 +53,7 @@ class GroupController < ApplicationController
   end
 
   def set_group
-    Group.find(params[:id])
+    @group = Group.find(params[:id])
   end
 
   def group_params
