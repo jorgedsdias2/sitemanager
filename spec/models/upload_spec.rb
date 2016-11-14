@@ -6,23 +6,17 @@ RSpec.describe Upload, type: :model do
 		@upload = FactoryGirl.build(:upload)
 	end
 
-	it "be a valid image" do
-		@upload.image = File.new(Rails.root + "spec/support/images/wrong")
+	it 'be a valid image' do
+		@upload.image = File.new(Rails.root + 'spec/support/images/wrong')
 		expect(@upload).to be_invalid
 	end
 
-	it "not save upload without page id" do
-		@upload.page_id = nil
-		@upload.save
-		expect(@upload.errors[:page_id].any?).to eq(true)
-	end
-
-	it "success upload image" do
+	it 'success upload image' do
 		@upload.save
 		expect(File.exists?(@upload.get_path('original'))).to eq(true)
 	end
 
-	it "success delete upload" do
+	it 'success delete upload' do
 		@upload.save
 		@upload.image.destroy
 		expect(File.exists?(@upload.get_path('original'))).to eq(false)
