@@ -8,6 +8,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'support/sessions_helper'
 require 'support/users_helper'
+require 'support/groups_helper'
 require 'rack_session_access/capybara'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -63,5 +64,6 @@ RSpec.configure do |config|
   config.include Capybara::DSL
   config.include SessionsHelper
   config.include UsersHelper
+  config.include GroupsHelper
   config.include Utilities
 end
