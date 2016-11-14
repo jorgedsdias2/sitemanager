@@ -23,13 +23,13 @@ class Upload < ActiveRecord::Base
 			:ftp_connect_timeout => 10000,
 			:ftp_ignore_failing_connections => true,
 			:ftp_keep_empty_directories => true,
-			styles: { thumb: "103x91>", medium: "300x160>" }
+			styles: { thumb: '103x91>', medium: '300x160>' }
 		}
 	else
 		has_attached_file :image,
-		styles: { thumb: "103x91>", medium: "300x160>" },
-		:path => ":rails_root/public/images/:style/:id/:filename",
-		:url  => "/images/:style/:id/:filename"		
+		styles: { thumb: '103x91>', medium: '300x160>' },
+		:path => ':rails_root/public/images/:style/:id/:filename',
+		:url  => '/images/:style/:id/:filename'		
 	end
 
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

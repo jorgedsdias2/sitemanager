@@ -14,12 +14,12 @@ module Myftp
 
 		def ftp_params(name)
 			ftp_params = {
-				:absolute_path => "http://www.{my_site}.com.br",
-				:path => "/{path}/images/:style/:id/:filename",
-				:url => "/images/:style/:id/:filename",
-				:host => "{host}",
-				:user => "{user}",
-				:password => "{password}",
+				:absolute_path => 'http://www.{my_site}.com.br',
+				:path => '/{path}/images/:style/:id/:filename',
+				:url => '/images/:style/:id/:filename',
+				:host => '{host}',
+				:user => '{user}',
+				:password => '{password}',
 				:port => 21,
 				:passive => true
 			}
