@@ -10,6 +10,9 @@ pt-BR:
         group:
           one: 'Grupo'
           other: 'Grupos'
+        upload:
+          one: 'Upload'
+          other: 'Uploads'
     attributes:
       page:
         title: 'Título'

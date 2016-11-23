@@ -13,6 +13,7 @@ pt-BR:
     data: 'Data'
     edit: 'Edit'
     remove: 'Remover'
+    error: "Erro"
     validations:
       not_authorized: 'Não autorizado'
       wrong_email_password: 'E-mail ou Senha inválidos'
@@ -38,3 +39,6 @@ pt-BR:
       create_success: 'Grupo criado com sucesso!'
       update_success: 'Grupo alterado com sucesso!'
       destroy_success: 'Grupo deletado com sucesso!'
+    upload:
+      create_success: 'Upload criado com sucesso!'
+      destroy_success: 'Upload deletado com sucesso!'
