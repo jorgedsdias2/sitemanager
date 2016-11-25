@@ -34,6 +34,11 @@ Instalação de dependências
 Instalar gem para conexão com Postgresql  
   
   sudo gem install pg -v '0.18.1'
+
+== Configurar o CKEditor
+
+  rails g ckeditor:install --orm=active_record --backend=paperclip
+  rake db:migrate
   
 == Suíte de Testes do Sistema
 

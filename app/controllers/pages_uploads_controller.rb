@@ -1,4 +1,4 @@
-class UploadsController < ApplicationController
+class PagesUploadsController < ApplicationController
   layout 'panel'
   before_action :require_user
   before_action :set_title
@@ -11,7 +11,7 @@ class UploadsController < ApplicationController
 
     if upload_params[:images]
       upload_params[:images].each do |image|
-        @upload = Upload.create(image: image)
+        @upload = Page.find(upload_params[:page_id]).uploads.create(image: image)
 
         if @upload.save
           success = true
@@ -26,7 +26,7 @@ class UploadsController < ApplicationController
       if success
         format.json { render :json => { success: t('text.upload.create_success'), status: :created } }
       else
-        format.json { render :json => { error: "#{t('text.error')}: " + error }, status: :unprocessable_entity }
+        format.json { render :json => { error: "#{t('text.error')}: #{error}", status: :unprocessable_entity } }
       end
     end
   end
@@ -36,9 +36,9 @@ class UploadsController < ApplicationController
 
     respond_to do |format|
       if @upload.destroy
-        format.json { render :json => { success: t('text.upload.destroy_success'), status: :created } }
+        format.json { render :json => { success: t('text.upload.destroy_success'), status: created } }
       else
-        format.json { render :json => { error: "#{t('text.error')}: " + @upload.errors.full_messages.to_s }, status: :unprocessable_entity }
+        format.json { render :json => { error: "#{t('text.error')}: #{@upload.errors.full_messages.to_s}", status: :unprocessable_entity } }
       end
     end
   end
@@ -53,6 +53,6 @@ class UploadsController < ApplicationController
   end
 
   def upload_params
-    params.require(:upload).permit({images: []})
+    params.require(:upload).permit(:page_id, {images: []})
   end
 end

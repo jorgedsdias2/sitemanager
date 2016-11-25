@@ -1,11 +1,11 @@
 # -*- encoding : utf-8 -*-
 class UsersController < ApplicationController
   layout 'panel'
-  before_filter :require_user
-  before_filter :set_title
+  before_action :require_user
+  before_action :set_title
   before_action :set_user, only: [:edit, :update, :destroy]
   before_action :list_group, only: [:new, :edit]
-  skip_before_filter :verify_authenticity_token, :only => [:destroy]
+  skip_before_filter :verify_authenticity_token, only: [:destroy]
 
   def index
     @users = User.order('id DESC').all

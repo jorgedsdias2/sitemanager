@@ -15,19 +15,19 @@ gem 'bootstrap-sass'
 gem 'responders', '~> 2.0'
 
 # resolve problema less
-gem "therubyracer"
-gem "less-rails", '~> 2.7.1' # 2.7.1 for undefined method `register_preprocessor' for nil:NilClass
-gem "twitter-bootstrap-rails"
+gem 'therubyracer'
+gem 'less-rails', '~> 2.7.1' # 2.7.1 for undefined method `register_preprocessor' for nil:NilClass
+gem 'twitter-bootstrap-rails'
 
 gem 'paperclip'
-gem "paperclip-storage-ftp"
+gem 'paperclip-storage-ftp'
 
 group :development, :test do
   gem 'byebug'
 
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem "rack_session_access"
+  gem 'rack_session_access'
   gem 'rspec-rails'
   #gem 'guard-rspec'
 end

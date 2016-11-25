@@ -1,0 +1,2 @@
+module PagesUploadsHelper
+end

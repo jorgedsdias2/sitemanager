@@ -13,12 +13,23 @@ pt-BR:
     data: 'Data'
     edit: 'Edit'
     remove: 'Remover'
-    error: "Erro"
+    error: 'Erro'
+    images: 'Images'
     validations:
       not_authorized: 'Não autorizado'
       wrong_email_password: 'E-mail ou Senha inválidos'
       dont_delete_administrator: 'Não se pode deletar um usuário administrator'
       dont_save_register: 'proibindo este usuário de ser salvo'
+    page:
+      list: 'Listagem de Páginas'
+      new: 'Cadastrar Nova Página'
+      delete: 'Quer mesmo remover esse página?'
+      register: 'Cadastro de páginas'
+      update: 'Editar página'
+      not_found: 'Nenhum página encontrado'
+      create_success: 'Página criado com sucesso!'
+      update_success: 'Página alterado com sucesso!'
+      destroy_success: 'Página deletado com sucesso!'
     user:
       list: 'Listagem de Usuários'
       new: 'Cadastrar Novo Usuário'
@@ -29,6 +40,7 @@ pt-BR:
       create_success: 'Usuário criado com sucesso!'
       update_success: 'Usuário alterado com sucesso!'
       destroy_success: 'Usuário deletado com sucesso!'
+      dont_delete_page_with_image: 'Não se pode deletar páginas com imagens'
     group:
       list: 'Listagem de Grupos'
       new: 'Cadastrar Novo Grupo'

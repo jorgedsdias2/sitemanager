@@ -1,10 +1,10 @@
 # -*- encoding : utf-8 -*-
 class GroupsController < ApplicationController
   layout 'panel'
-  before_filter :require_user
-  before_filter :set_title
+  before_action :require_user
+  before_action :set_title
   before_action :set_group, only: [:edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token, :only => [:destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy]
 
   def index
     @groups = Group.order('id DESC').all

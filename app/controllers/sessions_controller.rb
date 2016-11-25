@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
 class SessionsController < ApplicationController
 	layout 'login'
-	before_filter :require_user, only: [:index]
-	before_filter :set_title, :only => [:new]
+	before_action :require_user, only: [:index]
+	before_action :set_title, :only => [:new]
 
 	def index
 		@title = 'Dashboard'
