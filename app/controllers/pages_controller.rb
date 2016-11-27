@@ -16,7 +16,7 @@ class PagesController < ApplicationController
   def edit
     @uploads = @page.uploads.all
     @upload = Upload.new
-    absolute_path ||= Upload.ftp_params(:absolute_path) if Upload.use_ftp?
+    @absolute_path ||= Upload.ftp_params(:absolute_path) if Upload.use_ftp?
   end
 
   def create
@@ -61,6 +61,6 @@ class PagesController < ApplicationController
   end
 
   def page_params
-    params.require(:page).permit(:title, :summary, :description, :nicknamem, :link, :target, :order, :status, :user_id)
+    params.require(:page).permit(:title, :summary, :description, :nickname, :link, :target, :order, :status, :user_id)
   end
 end

@@ -36,7 +36,7 @@ class PagesUploadsController < ApplicationController
 
     respond_to do |format|
       if @upload.destroy
-        format.json { render :json => { success: t('text.upload.destroy_success'), status: created } }
+        format.json { render :json => { success: t('text.upload.destroy_success'), status: :created } }
       else
         format.json { render :json => { error: "#{t('text.error')}: #{@upload.errors.full_messages.to_s}", status: :unprocessable_entity } }
       end
