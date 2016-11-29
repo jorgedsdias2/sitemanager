@@ -23,7 +23,12 @@ module Myftp
           :port => 21,
           :passive => true
       }
-      return ftp_params[name]
+
+      if self.use_ftp?
+        return ftp_params[name]
+      else
+        return ''
+      end
     end
   end
 end

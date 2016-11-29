@@ -18,11 +18,7 @@ $("#upload_images").fileinput({
     uploadExtraData: {"upload[page_id]": "<%= @page.id %>"},
     initialPreview: [
         <% @uploads.each do |u| %>
-            <% if @absolute_path %>
-              '<%= image_tag(@absolute_path + u.image.url, class: 'kv-preview-data file-preview-image', style: 'width:auto;height:160px;') %>',
-            <% else %>
-              '<%= image_tag(u.image.url, class: 'kv-preview-data file-preview-image', style: 'width:auto;height:160px;') %>',
-            <% end %>
+          '<%= image_tag(@absolute_path + u.image.url, class: 'kv-preview-data file-preview-image', style: 'width:auto;height:160px;') %>',
         <% end %>
     ],
     initialPreviewConfig: [
