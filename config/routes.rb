@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :groups
   resources :pages
   resources :sessions
-  resources :pages_uploads
-  post 'pages_uploads_destroy', to: 'pages_uploads#destroy'
+  resources :uploads
+  post 'uploads_destroy', to: 'uploads#destroy'
 
   get 'index', to: 'sessions#index'
   get 'panel', to: 'sessions#new'

@@ -1,4 +1,6 @@
-class PagesUploadsController < ApplicationController
+class UploadsController < ApplicationController
+  include UploadsModule
+
   layout 'panel'
   before_action :require_user
   before_action :set_title
@@ -11,7 +13,7 @@ class PagesUploadsController < ApplicationController
 
     if upload_params[:images]
       upload_params[:images].each do |image|
-        @upload = Page.find(upload_params[:page_id]).uploads.create(image: image)
+        @upload = self.return_upload(upload_params, image)
 
         if @upload.save
           success = true

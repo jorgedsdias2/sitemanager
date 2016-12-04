@@ -4,19 +4,19 @@ class Upload < ActiveRecord::Base
 
   has_and_belongs_to_many :pages
 
-  if self.use_ftp?
+  if use_ftp?
     has_attached_file :image,
                       {
                           :storage => :ftp,
-                          :path => self.ftp_params(:path),
-                          :url => self.ftp_params(:url),
+                          :path => ftp_params(:path),
+                          :url => ftp_params(:url),
                           :ftp_servers => [
                               {
-                                  :host => self.ftp_params(:host),
-                                  :user => self.ftp_params(:user),
-                                  :password => self.ftp_params(:password),
-                                  :port => self.ftp_params(:port),
-                                  :passive => self.ftp_params(:passive)
+                                  :host => ftp_params(:host),
+                                  :user => ftp_params(:user),
+                                  :password => ftp_params(:password),
+                                  :port => ftp_params(:port),
+                                  :passive => ftp_params(:passive)
                               }
                           ],
                           :ftp_connect_timeout => 10000,
@@ -34,6 +34,6 @@ class Upload < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def get_path(style)
-    Rails.root + "public/images/#{style}/#{self.id}/#{self.image_file_name}"
+    Rails.root + "public/images/#{style}/#{id}/#{image_file_name}"
   end
 end
