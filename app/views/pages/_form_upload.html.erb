@@ -5,7 +5,7 @@
             <div class="col-lg-12">
 				<%= form_for @upload, url: uploads_path, html: { multipart: true } do |f| %>
                     <%= f.hidden_field :page_id, value: @page.id %>
-					<%= f.file_field :images, multiple: true %><br /><br />
+					<%= f.file_field :images, multiple: false %><br /><br />
 				<% end %>
             </div>
         </div>
