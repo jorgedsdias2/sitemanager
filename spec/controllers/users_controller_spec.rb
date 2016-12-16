@@ -6,7 +6,7 @@ RSpec.describe UsersController, type: :controller do
   subject { page }
   let(:group) { FactoryGirl.create(:group, name: 'Administrator') }
   let(:user) { FactoryGirl.create(:user, group_id: group.id) }
-  let(:new_user) { User.new(name: 'New User', email: 'new_user@email.com', password: '123456', group_id: 1, role: 'user' ) }
+  let(:new_user) { FactoryGirl.build(:user, id: nil, name: 'Other User', email: 'other@email.com') }
 
   # GET index
   describe 'GET index' do
@@ -50,9 +50,8 @@ RSpec.describe UsersController, type: :controller do
   describe 'POST create' do
     describe 'successful' do
       before do
-        #logged_as(user)
-        #create_new_user(new_user)
-        puts new_user.inspect
+        logged_as(user)
+        create_new_user(new_user)
       end
 
       it { should have_selector('div.alert.alert-success', text: t('text.user.create_success')) }
