@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Upload < ActiveRecord::Base
-  include Myftp
+  include FtpConcern
 
   has_and_belongs_to_many :pages
 
