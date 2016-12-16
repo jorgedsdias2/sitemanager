@@ -6,7 +6,7 @@ RSpec.describe UsersController, type: :controller do
   subject { page }
   let(:group) { FactoryGirl.create(:group, name: 'Administrator') }
   let(:user) { FactoryGirl.create(:user, group_id: group.id) }
-  let(:new_user) { FactoryGirl.build(:user, id: nil, name: 'Other User', email: 'other@email.com') }
+  let(:new_user) { User.new(name: 'New User', email: 'new_user@email.com', password: '123456', group_id: 1, role: 'user' ) }
 
   # GET index
   describe 'GET index' do
