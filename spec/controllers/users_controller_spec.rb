@@ -50,8 +50,9 @@ RSpec.describe UsersController, type: :controller do
   describe 'POST create' do
     describe 'successful' do
       before do
-        logged_as(user)
-        create_new_user(new_user)
+        #logged_as(user)
+        #create_new_user(new_user)
+        puts new_user.inspect
       end
 
       it { should have_selector('div.alert.alert-success', text: t('text.user.create_success')) }
