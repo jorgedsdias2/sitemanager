@@ -19,5 +19,9 @@
 //= require ./sb-admin-2
 //= require ./fileinput/fileinput.min.js
 //= require ./fileinput/themes/fa/fa.js
-$('.dropdown-toggle').dropdown();
-$('#side-menu').metisMenu();
+
+// makes dropdown and metisMenu work with turbolinks
+$(document).on('page:change', function () {
+	$('.dropdown-toggle').dropdown();
+	$('#side-menu').metisMenu();
+});
