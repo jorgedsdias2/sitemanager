@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-module UploadsModule
+module UploadsConcern
   extend ActiveSupport::Concern
 
   included do

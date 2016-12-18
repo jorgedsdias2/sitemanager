@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-module Myftp
+module FtpConcern
   extend ActiveSupport::Concern
 
   $use_ftp = false

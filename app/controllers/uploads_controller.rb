@@ -1,5 +1,5 @@
 class UploadsController < ApplicationController
-  include UploadsModule
+  include UploadsConcern
 
   layout 'panel'
   before_action :require_user
