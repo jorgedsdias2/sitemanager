@@ -6,5 +6,6 @@ services:
 before_script:
   - psql -c 'create database jorgediasteste;' -U postgres
 script:
-  - bundle exec rake db:migrate:reset RAILS_ENV=test -- trace
+  - RAILS_ENV=test
+  - bundle exec rake db:migrate:reset -- trace
   - bundle exec rspec -f d spec
