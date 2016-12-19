@@ -7,5 +7,5 @@ before_script:
   - psql -c 'create database jorgediasteste;' -U postgres
   - RAILS_ENV=test
 script:
-  - bundle exec rake db:migrate:reset -- trace
+  - bundle exec rake db:migrate:reset --trace
   - bundle exec rspec -f d spec
