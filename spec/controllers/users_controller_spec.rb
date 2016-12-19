@@ -4,8 +4,8 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
   render_views
   subject { page }
-  let(:group) { FactoryGirl.create(:group, name: 'Administrator') }
-  let(:user) { FactoryGirl.create(:user, group_id: group.id) }
+  let!(:group) { FactoryGirl.create(:group, name: 'Administrator') }
+  let!(:user) { FactoryGirl.create(:user, group_id: group.id) }
   let(:new_user) { FactoryGirl.build(:user, id: nil, name: 'Other User', email: 'other@email.com') }
 
   # GET index
