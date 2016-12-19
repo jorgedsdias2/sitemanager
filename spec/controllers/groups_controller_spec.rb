@@ -37,7 +37,7 @@ RSpec.describe GroupsController, type: :controller do
     describe 'edit group' do
       before do
         logged_as(user)
-        visit edit_group_path(user)
+        visit edit_group_path(group)
       end
 
       it { should have_text(t('text.group.update')) }
