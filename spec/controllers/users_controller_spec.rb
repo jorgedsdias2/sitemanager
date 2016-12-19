@@ -51,7 +51,6 @@ RSpec.describe UsersController, type: :controller do
     describe 'successful' do
       before do
         logged_as(user)
-        puts "ID do usuario: #{user.id}"
         create_new_user(new_user)
       end
 
