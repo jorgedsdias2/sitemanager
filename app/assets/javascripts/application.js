@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require ckeditor/init
-//= require bootstrap
 //= require_tree ./plugins
 //= require ./sb-admin-2
 //= require ./fileinput/fileinput.min.js
