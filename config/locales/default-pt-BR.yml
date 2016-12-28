@@ -7,6 +7,7 @@ pt-BR:
     my_site_title: 'Meu Site | %{title}'
     change_password: 'Alterar Senha'
     register: 'Cadastrar'
+    update: 'Atualizar'
     clean: 'Limpar'
     register_new: 'Cadastrar Novo(a)'
     list_all: 'Listar Todo(a)s'

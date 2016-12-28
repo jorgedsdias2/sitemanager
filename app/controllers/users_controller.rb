@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   before_action :require_user
   before_action :set_title
   before_action :set_user, only: [:edit, :update, :destroy]
-  before_action :list_group, only: [:new, :edit]
   skip_before_filter :verify_authenticity_token, only: [:destroy]
 
   def index
@@ -13,9 +12,11 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    render_view :new
   end
 
   def edit
+    render_view :edit
   end
 
   def create
@@ -25,10 +26,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to users_url, notice: t('text.user.create_success'), alert: 'success' }
       else
-        format.html {
-          list_group
-          render :new
-        }
+        format.html { render_view :new }
       end
     end
   end
@@ -38,10 +36,7 @@ class UsersController < ApplicationController
       if @user.update(user_params)
         format.html { redirect_to users_url, notice: t('text.user.update_success'), alert: 'success' }
       else
-        format.html {
-          list_group
-          render :edit
-        }
+        format.html { render_view :edit }
       end
     end
   end
@@ -63,8 +58,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def list_group
-    @group = Group.order('id DESC').all
+  def render_view(view)
+    @groups = Group.order('id DESC').all
+    render view
   end
 
   def user_params
