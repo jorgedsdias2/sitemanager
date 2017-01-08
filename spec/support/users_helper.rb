@@ -3,11 +3,13 @@ module UsersHelper
   def create_new_user(user)
     visit new_user_path
     user_form(user)
+    click_button t('text.register')
   end
 
   def update_user(user)
     visit edit_user_path(user)
     user_form(user)
+    click_button t('text.update')
   end
 
   private
@@ -17,7 +19,6 @@ module UsersHelper
     fill_in 'user[email]', with: user.email
     select group.name, from: 'user[group_id]'
     fill_in 'user[password]', with: user.password
-    fill_in 'user[password_confirmation]', with: user.password
-    click_button t('text.register')
+    fill_in 'user[password_confirmation]', with: user.password    
   end
 end
