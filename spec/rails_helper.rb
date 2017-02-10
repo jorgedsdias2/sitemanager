@@ -65,5 +65,5 @@ RSpec.configure do |config|
   config.include SessionsHelper
   config.include UsersHelper
   config.include GroupsHelper
-  config.include Utilities
+  config.include UtilitieConcern
 end

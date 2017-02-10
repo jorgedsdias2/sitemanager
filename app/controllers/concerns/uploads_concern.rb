@@ -18,3 +18,4 @@ module UploadsConcern
     model.uploads.create(image: image)
   end
 end
+

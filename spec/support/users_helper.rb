@@ -22,3 +22,4 @@ module UsersHelper
     fill_in 'user[password_confirmation]', with: user.password    
   end
 end
+

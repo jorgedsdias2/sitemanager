@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PagesController < ApplicationController
   layout 'panel'
   before_action :require_user
@@ -42,11 +43,14 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    respond_to do |format|
-      if @page.destroy
-        format.html { redirect_to pages_url, notice: t('text.page.destroy_success'), alert: 'success' }
+    has_uploads = @page.uploads.any?
+    @page.destroy    
+
+    respond_to do |format|        
+      if has_uploads
+        format.html { redirect_to pages_url, notice: "Erro: #{@page.errors[:upload].to_s}", alert: 'danger' }
       else
-        format.html { redirect_to pages_url, notice: "Erro: #{@page.errors.full_messages.to_s}", alert: 'danger' }
+        format.html { redirect_to pages_url, notice: t('text.page.destroy_success'), alert: 'success' }
       end
     end
   end

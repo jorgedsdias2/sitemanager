@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
-  include Utilities
+  include UtilitieConcern
 
   belongs_to :group
   has_many :pages

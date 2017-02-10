@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'rails_helper'
 
 RSpec.describe Subpage, type: :model do
@@ -84,10 +85,10 @@ RSpec.describe Subpage, type: :model do
 			@subpage.user_id = user_bd.id
 			@subpage.page_id = page_db.id
 			@subpage.save
-			@subpage.uploads.create(image: File.new(Rails.root + 'spec/support/images/wrong'))
+			@subpage.uploads.create(image: File.new(Rails.root + 'spec/support/images/rails.png'))
 			@subpage.destroy
 		end
 
-		it{ expect(@subpage.errors[:base].any?).to eq(true) }
+		it{ expect(@subpage.errors[:upload].any?).to eq(true) }
 	end
 end

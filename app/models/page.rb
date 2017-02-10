@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Page < ActiveRecord::Base
+  include UtilitieConcern
+
   belongs_to :user
   has_and_belongs_to_many :uploads
   validates :title, presence: true, uniqueness: true
@@ -13,7 +15,7 @@ class Page < ActiveRecord::Base
   private
   def dont_delete_page_with_image
     if self.uploads.any?
-      errors.add(:base, t('text.page.dont_delete_page_with_image'))
+      errors.add(:upload, t('text.page.dont_delete_page_with_image'))
       return false
     end
   end

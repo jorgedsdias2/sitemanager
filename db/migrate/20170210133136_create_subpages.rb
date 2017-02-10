@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateSubpages < ActiveRecord::Migration
   def change
     create_table :subpages do |t|
