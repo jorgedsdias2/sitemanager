@@ -31,6 +31,18 @@ pt-BR:
       create_success: 'Página criado com sucesso!'
       update_success: 'Página alterado com sucesso!'
       destroy_success: 'Página deletado com sucesso!'
+      dont_delete_page_with_image: 'Não se pode deletar páginas com imagens'
+    subpage:
+      list: 'Listagem de Subpáginas'
+      new: 'Cadastrar Nova Subpágina'
+      delete: 'Quer mesmo remover esse subpágina?'
+      register: 'Cadastro de subpáginas'
+      update: 'Editar subpágina'
+      not_found: 'Nenhum subpágina encontrado'
+      create_success: 'Subpágina criado com sucesso!'
+      update_success: 'Subpágina alterado com sucesso!'
+      destroy_success: 'Subpágina deletado com sucesso!'
+      dont_delete_subpage_with_image: 'Não se pode deletar subpáginas com imagens'
     user:
       list: 'Listagem de Usuários'
       new: 'Cadastrar Novo Usuário'
@@ -41,7 +53,6 @@ pt-BR:
       create_success: 'Usuário criado com sucesso!'
       update_success: 'Usuário alterado com sucesso!'
       destroy_success: 'Usuário deletado com sucesso!'
-      dont_delete_page_with_image: 'Não se pode deletar páginas com imagens'
     group:
       list: 'Listagem de Grupos'
       new: 'Cadastrar Novo Grupo'
