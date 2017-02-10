@@ -9,10 +9,12 @@ class Subpage < ActiveRecord::Base
   validates :user_id, presence: true
   validates :page_id, presence: true
 
+  before_destroy :dont_delete_subpage_with_image
+
   private
   def dont_delete_subpage_with_image
   	if self.uploads.any?
-  		errors.add(:upload, t('text.page.dont_delete_subpage_with_image'))
+  		errors.add(:upload, t('text.subpage.dont_delete_subpage_with_image'))
   		return false
   	end
   end

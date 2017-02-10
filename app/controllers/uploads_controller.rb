@@ -55,6 +55,6 @@ class UploadsController < ApplicationController
   end
 
   def upload_params
-    params.require(:upload).permit(:page_id, {images: []})
+    params.require(:upload).permit(:page_id, :subpage_id, {images: []})
   end
 end

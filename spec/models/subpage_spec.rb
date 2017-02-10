@@ -88,6 +88,6 @@ RSpec.describe Subpage, type: :model do
 			@subpage.destroy
 		end
 
-		it{ expect(@subpage.errors.any?).to eq(true) }
+		it{ expect(@subpage.errors[:base].any?).to eq(true) }
 	end
 end

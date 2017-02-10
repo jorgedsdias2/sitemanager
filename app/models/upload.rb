@@ -3,6 +3,7 @@ class Upload < ActiveRecord::Base
   include FtpConcern
 
   has_and_belongs_to_many :pages
+  has_and_belongs_to_many :subpages
 
   if use_ftp?
     has_attached_file :image,

@@ -35,6 +35,7 @@ RSpec.describe Page, type: :model do
 		@page.description = "1" * 255 + "1"
 		@page.save
 		expect(@page.errors[:description].any?).to eq(true)
+		#@page.erros[:description].any?.should be_true
 	end
 
 	it "not save page if order is not integer" do
