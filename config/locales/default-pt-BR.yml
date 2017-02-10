@@ -32,6 +32,7 @@ pt-BR:
       update_success: 'Página alterado com sucesso!'
       destroy_success: 'Página deletado com sucesso!'
       dont_delete_page_with_image: 'Não se pode deletar páginas com imagens'
+      
     subpage:
       list: 'Listagem de Subpáginas'
       new: 'Cadastrar Nova Subpágina'
