@@ -56,4 +56,15 @@ RSpec.describe Page, type: :model do
 		@page.save
 		expect(@page.errors[:user_id].any?).to eq(true)
 	end
+
+	describe "dont delete page with image" do
+		before do
+			@page.user_id = user_bd.id
+			@page.save
+			@page.uploads.create(image: File.new(Rails.root + 'spec/support/images/rails.png'))
+			@page.destroy
+		end
+
+		it{ expect(@page.errors[:upload].any?).to eq(true) }
+	end	
 end
