@@ -4,7 +4,8 @@ require 'rails_helper'
 RSpec.describe SessionsController, type: :controller do
 	render_views
 	subject { page }
-	let(:user) { FactoryGirl.create(:user) }
+	let(:group_bd) { FactoryGirl.create(:group) }
+	let(:user) { FactoryGirl.create(:user, group_id: group_bd.id) }
 
 	# GET index
 	describe "GET index" do

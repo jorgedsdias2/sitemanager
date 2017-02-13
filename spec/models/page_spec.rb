@@ -6,7 +6,8 @@ RSpec.describe Page, type: :model do
 		@page = FactoryGirl.build(:page)
 	end
 
-	let(:user_bd) { FactoryGirl.create(:user, email: 'user1@email.com') }
+	let(:group_bd) { FactoryGirl.create(:group) }
+	let(:user_bd) { FactoryGirl.create(:user, group_id: group_bd.id) }
 	let(:page_db) { FactoryGirl.create(:page, title: 'Other Page', user_id: user_bd.id) }
 
 	it "be a valid page" do
