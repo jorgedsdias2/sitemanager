@@ -10,5 +10,6 @@ FactoryGirl.define do
     order 1
     status "MyString"
     user nil
+    page nil
   end
 end
